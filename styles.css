@@ -1,0 +1,29 @@
+:root {
+  --default: #f0f8ff;
+  --primary: #6a0080;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--default);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calculator-container {
+  flex: 0 1 auto;
+  border: 2px solid black;
+}
+.screen {
+  border: 2px solid black;
+}
+.calc-buttons {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
+}
+.calc-buttons button {
+  font-size: 18px;
+}
