@@ -1,36 +1,36 @@
 const add = (num1, num2) => {
-  return num1 + num2;
+  return parseFloat((num1 + num2).toFixed(4));
 };
 
 const subtract = (num1, num2) => {
-  return num1 - num2;
+  return parseFloat((num1 - num2).toFixed(4));
 };
 
 const multiply = (num1, num2) => {
-  return num1 * num2;
+  return parseFloat((num1 * num2).toFixed(4));
 };
 
 const divide = (num1, num2) => {
   if (num2 === 0) {
+    handleClear();
     alert("Division by 0 is illegal!!");
-    //reset
-    return 0;
-  } else return num1 / num2;
+    return null;
+  } else return parseFloat((num1 / num2).toFixed(4));
 };
 
 //call an operation with two numbers
 const operate = (num1, num2, operator) => {
   if (operator === "+") {
-    return add(parseInt(num1), parseInt(num2));
+    return add(parseFloat(num1), parseFloat(num2));
   }
   if (operator === "-") {
-    return subtract(parseInt(num1), parseInt(num2));
+    return subtract(parseFloat(num1), parseFloat(num2));
   }
   if (operator === "×") {
-    return multiply(parseInt(num1), parseInt(num2));
+    return multiply(parseFloat(num1), parseFloat(num2));
   }
   if (operator === "÷") {
-    return divide(parseInt(num1), parseInt(num2));
+    return divide(parseFloat(num1), parseFloat(num2));
   }
 };
 
@@ -38,9 +38,8 @@ const handleClick = (e) => {
   const buttonClass = [...e.target.classList];
   const screenCurrent = document.querySelector(".screen-current");
   const currentClass = [...screenCurrent.classList];
-  // const buttonText=e.target.innerText;
   if (buttonClass.includes("number")) {
-    const num = parseInt(e.target.innerText);
+    const num = parseFloat(e.target.innerText);
     if (currentClass.includes("active")) {
       setNumber(num);
     } else {
