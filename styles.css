@@ -36,7 +36,7 @@ main {
   box-shadow: 5px 5px;
 }
 .screen {
-  background-color: var(--default);
+  background-color: rgb(179, 179, 179);
   border: 2px solid black;
   margin-bottom: 20px;
   padding: 10px 20px;
@@ -56,6 +56,7 @@ button {
   border-radius: 8px;
   box-shadow: 2px 2px black;
   font-family: inherit;
+  cursor: pointer;
 }
 .cleanup-buttons {
   display: flex;
@@ -67,6 +68,12 @@ button {
   min-height: 76px;
   font-size: 25px;
 }
+.cleanup-buttons .clear {
+  background-color: rgb(29, 133, 29);
+}
+.cleanup-buttons .delete {
+  background-color: rgb(134, 16, 16);
+}
 .calc-buttons {
   display: grid;
   min-height: 300px;
@@ -75,4 +82,6 @@ button {
 }
 .calc-buttons button {
   font-size: 18px;
+  background-color: rgb(102, 81, 68);
+  color: white;
 }
